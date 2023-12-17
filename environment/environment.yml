@@ -1,0 +1,24 @@
+name: xeus-book
+channels:
+  - conda-forge
+  - bioconda
+  - anaconda
+dependencies:
+  - jupyterlab ~=4
+  # - cxx-compiler 
+  # - eigen
+  - xeus-cling =0.15
+  - xeus-zmq >=1.1.0,<2.0.0
+  - xtl >=0.7.0,<0.8.0
+  - cling >=0.9,<0.10
+  - pugixml ~=1.8.1
+  - cppzmq ~=4.3.0
+  - cpp-argparse ~=2.9
+  - nlohmann_json >=3.6.1,<4.0
+  - xtensor
+  - xtensor-blas
+  # - xtensor-io
+  - nodejs
+  - libpng ~=1.6
+  - opencv
+  - boost

@@ -1,6 +1,0 @@
-name: xeus-book
-channels:
-  - conda-forge
-dependencies:
-  - jupyter-book=0.15.1
-  - xeus-cling=0.15.0

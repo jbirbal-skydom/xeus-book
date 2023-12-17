@@ -1,0 +1,26 @@
+name: base
+channels:
+  - conda-forge
+  - anaconda
+  - bioconda
+dependencies:
+  - jupyterlab >=4.0.0
+  - opencv >=4.0.0,<4.5.0
+  - eigen
+  - xeus-cling
+  - xtensor
+  - xtensor-blas
+  - xtensor-io
+  - xwidgets
+  #- xplot
+  - libsndfile
+  - python >=3.8.0
+  - nodejs >=18.0.0
+  - pkg-config
+  - widgetsnbextension
+  - jupyterlab_widgets
+  - xtl
+  - xproperty
+  - xeus
+  - nlohmann_json
+  - ipywidgets

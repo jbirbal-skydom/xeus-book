@@ -1,0 +1,20 @@
+name: mamba-xeus-book
+channels:
+  - conda-forge
+  - anaconda
+  - bioconda
+dependencies:
+  - jupyterlab
+  - opencv
+  - eigen
+  - xeus-cling
+  - xtensor
+  - xtensor-blas
+  - xtensor-io
+  - libpng
+  - ffmpeg
+  - xwidgets
+  - openimageio[version='>=1.8.17,<1.9.0a0']
+  - python[version='>=3.7.0,<3.10.0a0']
+  - xplot
+  - libsndfile

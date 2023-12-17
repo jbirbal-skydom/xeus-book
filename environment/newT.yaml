@@ -1,0 +1,32 @@
+name: xplot
+channels:
+  - conda-forge
+  - anaconda
+  - bioconda
+dependencies:
+# Working xplot uses Jupyterlab 3.6.5
+  - jupyterlab >=4.0.0
+  - opencv >=4.0.0
+  #- eigen
+  - xeus-cling >=0.13.0
+  - xtensor >=0.24.6
+  - xtensor-blas
+  - xtensor-io >=0.9.0
+  - xwidgets >=0.26.1
+  #- xplot
+  - libsndfile
+  - python >=3.7.0
+  #- pkg-config
+  - widgetsnbextension >=4.0.9
+  - jupyterlab_widgets >=3.0.9
+  - xtl >=0.7.5
+  - xproperty >=0.11.0
+  - xeus >=2.4.1
+  - nlohmann_json
+  - ipywidgets >=8.1.1
+  - openimageio >=1.8.17
+  - boost
+  - nodejs
+  #### Maybe we need this? 
+  - jupyter
+  #- clang
