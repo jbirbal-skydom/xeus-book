@@ -1,0 +1,28 @@
+name: rust
+channels:
+  - conda-forge
+  - anaconda
+  #- bioconda
+  - plotly
+dependencies:
+  - python =3
+## For juyter
+  - nodejs =15
+  - jupyterlab =3.6.6
+  - plotly =5.18
+  - ipywidgets 
+## For Cmake
+  - cmake =3.25.0
+  - gxx_linux-64
+  - gcc_linux-64
+  - c-compiler
+  - cxx-compiler
+##for Rust
+  - rust >=1.74
+  - rust-src >=1.74
+## Additional
+  - opencv 
+#### Maybe we need this? 
+  - compilers
+  - fortran-compiler
+  - clang
