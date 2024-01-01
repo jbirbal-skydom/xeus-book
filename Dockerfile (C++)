@@ -17,6 +17,8 @@ RUN apt-get update && apt-get install -y \
 
 COPY ./back-end/entrypoint.sh /opt/conda/bin/entrypoint.sh
 
+RUN micromamba install -n base -c conda-forge --no-deps "boost>=1.77", "boost-cpp>=1.77"
+
 RUN chmod 755 /opt/conda/bin/entrypoint.sh
 #####################################################################################################
 USER $MAMBA_USER
@@ -27,6 +29,6 @@ USER $MAMBA_USER
 
 ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "/opt/conda/bin/entrypoint.sh" ] 
 
-## docker run -it -p 8989:8989 --name jupyter xeusbook:latest
-## docker  exec -it -u root jupyterm /bin/bash
+## docker run -it -p 8989:8989 --name jupyterC xeusbook:c
+## docker  exec -it -u root jupyterC /bin/bash
 ## http://localhost:8989/lab

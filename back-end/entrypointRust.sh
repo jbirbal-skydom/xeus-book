@@ -1,1 +1,1 @@
-jupyter lab --port=8990 --no-browser --allow-root  --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+jupyter lab --port=8990 --no-browser --allow-root  --ip='*' --NotebookApp.token='1234' --NotebookApp.password='inspire'
