@@ -12,8 +12,8 @@ RUN micromamba install -y -n base -f /home/mambauser/book/newT.yaml && \
 
 ################################ Run any apt installs that I may need #####################################
 USER root
-RUN apt-get update && apt-get install -y \
-    nano 
+# RUN apt-get update && apt-get install -y \
+#     nano 
 
 COPY ./back-end/entrypoint.sh /opt/conda/bin/entrypoint.sh
 

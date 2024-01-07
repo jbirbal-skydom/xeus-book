@@ -48,6 +48,6 @@ ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "/opt/conda/bin/entrypointRust.sh" 
 
 ################   Run   ###########################
 
-## docker run -it -p 8990:8990 --name jupyterRust xeusbook:rust
+## docker run -it -p 8990:8990 --name jupyterRust xeusbook:Rust
 ## docker  exec -it -u root jupyterRust /bin/bash
 ## http://localhost:8990/lab
