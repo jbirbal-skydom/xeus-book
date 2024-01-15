@@ -20,31 +20,33 @@ USER root
 
 COPY ./back-end/entrypointRust.sh /opt/conda/bin/entrypointRust.sh
 ENV PATH="/opt/conda/bin/:${PATH}"
-ENV PATH="/root/.cargo/bin:${PATH}"
-RUN cargo install --locked evcxr_jupyter
-RUN evcxr_jupyter --install
+# ENV PATH="/root/.cargo/bin:${PATH}"
+# RUN cargo install --locked evcxr_jupyter
+# RUN evcxr_jupyter --install
 
 
 
 RUN chmod 755 /opt/conda/bin/entrypointRust.sh
-
+RUN chown -R mambauser:mambauser /home/mambauser/book
 
 #####################################################################################################
 USER $MAMBA_USER
-RUN cargo install --locked evcxr_jupyter
+
+# kernel install the into a user local directory
+RUN cargo install --locked evcxr_jupyter  
 ENV PATH="/home/mambauser/.cargo/bin:${PATH}"
 RUN evcxr_jupyter --install
 
 
 ###############     Extra      #######################################################################
 
-RUN micromamba install -y -n base -c conda-forge graphviz
+
 
 ###############  Start Jupyter ######################################################################## 
 
 
 ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "/opt/conda/bin/entrypointRust.sh" ] 
-
+#
 
 ################   Run   ###########################
 

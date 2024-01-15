@@ -21,7 +21,8 @@ dependencies:
   - rust >=1.74
   - rust-src >=1.74
 ## Additional
-  - opencv 
+  - opencv
+  - graphviz 
 #### Maybe we need this? 
   - compilers
   - fortran-compiler
