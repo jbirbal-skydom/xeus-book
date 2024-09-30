@@ -29,6 +29,6 @@ USER $MAMBA_USER
 
 ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "/opt/conda/bin/entrypoint.sh" ] 
 
-## docker run -it -p 8989:8989 --name jupyterC xeusbook:c
+## docker run -it -p 8989:8989 --name jupyterC xeusbook:cxx
 ## docker  exec -it -u root jupyterC /bin/bash
 ## http://localhost:8989/lab

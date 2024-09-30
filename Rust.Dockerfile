@@ -13,10 +13,14 @@ RUN micromamba install -y -n base -f /home/mambauser/book/envRust.yaml && \
 ################################ Run any apt installs that I may need #####################################
 USER root
 
-# RUN apt-get update && apt-get install -y \
-#     nano \
-#     curl \
-#     cmake
+ RUN apt-get update && apt-get install -y \
+     nano \
+     curl \
+     git
+#     cmake \
+#     liblapack-dev \
+#     pkg-config \
+#     libssl-dev \
 
 COPY ./back-end/entrypointRust.sh /opt/conda/bin/entrypointRust.sh
 ENV PATH="/opt/conda/bin/:${PATH}"
@@ -40,7 +44,16 @@ RUN evcxr_jupyter --install
 
 ###############     Extra      #######################################################################
 
-
+RUN pip install openpyxl
+RUN pip install pandas
+RUN pip install matplotlib
+RUN pip install numpy
+RUN pip install seaborn
+RUN pip install scikit-learn
+RUN pip install scipy
+RUN pip install sympy
+RUN pip install scikit-image
+RUN pip install --upgrade jupyterlab jupyterlab-git
 
 ###############  Start Jupyter ######################################################################## 
 
